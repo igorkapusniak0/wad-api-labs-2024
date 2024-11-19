@@ -2,6 +2,7 @@
   "name": "tasky-api",
   "version": "1.0.0",
   "main": "module",
+  "type": "module",
  "scripts": {
     "start": "babel-node index.js",
     "dev": "nodemon --exec npm start"
