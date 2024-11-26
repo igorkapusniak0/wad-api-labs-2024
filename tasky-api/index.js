@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 import express from 'express';
 import tasksRouter from './api/tasks/index.js';
 import "./db/index.js";
-
+import usersRouter from './api/users/index.js';
 dotenv.config();
 
 const errHandler = (err, req, res, next) => {
@@ -21,6 +21,8 @@ const port = process.env.PORT;
 app.use(express.json());
 
 app.use('/api/tasks', tasksRouter);
+app.use('/api/users', usersRouter);
+
 app.use(errHandler);
 app.listen(port, () => {
   console.info(`Server running at ${port}`);
