@@ -9,5 +9,8 @@
     "dev": "babel-node ./initialise-dev/initDevDB.js && nodemon --exec npm start"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
 }
