@@ -1,10 +1,10 @@
 import dotenv from 'dotenv';
 dotenv.config();
 import mongoose from 'mongoose';
-import users from './users';
-import movies from './movies';
-import User from '../api/users/userModel';
-import Movie from '../api/movies/movieModel';
+import users from './users.js';
+import movies from './movies.js';
+import User from '../api/users/userModel.js';
+import Movie from '../api/movies/movieModel.js';
 
 async function main() {
     if (process.env.NODE_ENV !== 'development') {
