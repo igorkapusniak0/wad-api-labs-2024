@@ -15,3 +15,12 @@ export const getUpcomingMovies = async () => {
         throw error;
     }
 };
+
+export const getGenres = async () => {
+    const response = await fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.TMDB_KEY}&language=en-US`);
+    if (!response.ok) {
+        throw new Error('Failed to fetch genres from TMDB');
+    }
+    const data = await response.json();
+    return data.genres;
+};
